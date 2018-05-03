@@ -1,0 +1,12 @@
+<!--pages/join/join.wxml-->
+<view class = 'foot'>
+  <button class = 'tell' bindtap='tell'>电话咨询</button>
+  <button class = 'contract' open-type="contact">联系客服</button>
+</view>
+<view class="container">
+    <video objectFit='fill' src="http://bpic.ooopic.com/17/56/08/64bOOOPICb7.mp4"></video>
+</view>
+<view>
+  <button bindtap="downloadImage" type="primary">下载</button>
+</view>
+

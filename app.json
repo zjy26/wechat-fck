@@ -1,0 +1,27 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/join/join"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1AAD16",
+    "navigationBarTitleText": "My first Demo",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "selectedColor": "#1AAD16",
+    "list":[{
+      "pagePath": "pages/index/index",
+      "text": "首页", 
+      "iconPath": "images/icon_component.png",
+      "selectedIconPath": "images/icon_component_HL.png"
+    }, {
+      "pagePath": "pages/join/join",
+      "text": "详情",
+      "iconPath": "images/icon_API.png",
+      "selectedIconPath": "images/icon_API_HL.png"
+    }]
+  }
+}

@@ -1,0 +1,13 @@
+/* pages/join/join.wxss */
+.foot{
+   position: fixed; 
+   bottom: 0;
+}
+.tell{
+ float: left;
+ margin-left:50px;
+}
+.contract{
+  float:right;
+  margin-left:50px;
+}
