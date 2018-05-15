@@ -1,12 +1,43 @@
 <!--pages/join/join.wxml-->
-<view class = 'foot'>
-  <button class = 'tell' bindtap='tell'>电话咨询</button>
-  <button class = 'contract' open-type="contact">联系客服</button>
+ 
+<view class="nav_container">
+    <navigator class="nav_items" url="" hover-class="navigator-hover">课程同学</navigator>
+    <navigator class="nav_items" url="" hover-class="navigator-hover">课程评价</navigator>
+    <navigator class="nav_items" url="" hover-class="navigator-hover">网络硬盘</navigator>
+    <navigator class="nav_items" url="" hover-class="navigator-hover">留言板</navigator>
+    <navigator class="nav_items" url="" hover-class="navigator-hover">答题集锦</navigator>
 </view>
-<view class="container">
-    <video objectFit='fill' src="http://bpic.ooopic.com/17/56/08/64bOOOPICb7.mp4"></video>
-</view>
-<view>
-  <button bindtap="downloadImage" type="primary">下载</button>
-</view>
+  <!-- <view class="nav_right">
+    <view wx:if="{{navRightItems[curIndex].tree.nodes[1].tree.nodes}}">
+      <block wx:for="{{navRightItems[curIndex].tree.nodes[1].tree.nodes}}">
+        <view class="nav_right_items">
+          <navigator url="../list/index?brand={{item.tree.id}}&typeid={{navRightItems[curIndex].id}}">
+            <view>
+              <block wx:if="{{item.tree.logo}}">
+                <image src="{{item.tree.logo}}"></image>
+              </block>
+              <block wx:else>
+                <image src="http://temp.im/50x30"></image>
+              </block>
+            </view>
+            <view wx:if="{{item.tree.desc}}">
+              <text>{{item.tree.desc}}</text>
+            </view>
+            <view wx:else>
+              <text>{{item.tree.desc2}}</text>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+    <view wx:else>暂无数据</view>
+  </view> -->
 
+
+
+
+
+
+
+
+<!-- 课程同学 课程评价 网络硬盘 留言板 答题集锦 -->

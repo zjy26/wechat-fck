@@ -1,0 +1,30 @@
+<!--pages/mine/mine.wxml-->
+
+<view class="container">
+	<view class="userinfo">
+		<image wx:if="{{userInfo && userInfo.avatarUrl}}" class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+		<text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+	</view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view wx:if="{{!userMobile}}" class="my-item" style="border:none;padding-right:150rpx;width:auto;">
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">绑定身份</button>
+  </view>
+  <view wx:if="{{userMobile}}" class="my-item" style="border:none;padding-right:150rpx;width:auto;">
+    {{userMobile}}
+  </view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+   <button class="contract" open-type="contact">
+    联系客服
+  </button>
+  <view class="about" bindtap="aboutUs">
+    关于我们
+  </view>
+
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view class="my-item" style="border:none;padding:0rpx;margin:0rpx;background:none;border:none;height:auto;line-height:auto;">
+    <button type="warn" bindtap="relogin">重新登录</button>
+  </view>
+</view>
+
+
+

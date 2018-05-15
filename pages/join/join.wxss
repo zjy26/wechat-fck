@@ -1,13 +1,16 @@
 /* pages/join/join.wxss */
-.foot{
-   position: fixed; 
-   bottom: 0;
+
+page{
+  background: #f5f5f5;
 }
-.tell{
- float: left;
- margin-left:50px;
+.nav_container{
+  background: #f5f5f5;
+  text-align: center;
 }
-.contract{
-  float:right;
-  margin-left:50px;
+.nav_items{
+  float: left;
+  height: 30rpx;
+  width: 150rpx;
+  padding: 20rpx 0;
+  font-size: 14px;
 }

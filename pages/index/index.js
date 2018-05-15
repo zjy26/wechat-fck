@@ -15,17 +15,29 @@ Page({
     duration: 1000,
     proList: [
       {
-        logo:'/images/logo.png',
-        title: 'text1',
-        desc:'aaaaaaaa',
+        course: '/images/course.png',
+        title: '申报信息'
       },{
-        logo: '/images/logo.png',
-        title: 'text2',
-        desc: 'bbbbbbb',
+        course: '/images/course.png',
+        title: '课程首页'
       }, {
-        logo: '/images/logo.png',
-        title: 'text3',
-        desc: 'ccccccc',
+        course: '/images/course.png',
+        title: '课程导学'
+      }, {
+        course: '/images/course.png',
+        title: '理论教学'
+      }, {
+        course: '/images/course.png',
+        title: '实践教学'
+      }, {
+        course: '/images/course.png',
+        title: '参考资料'
+      }, {
+        course: '/images/course.png',
+        title: '自我测试'
+      }, {
+        course: '/images/course.png',
+        title: '课程作业'
       }
 
     ]

@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true">
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{imgUrls}}">
     <swiper-item>
       <image src="{{item}}" class="slide-image" width="355" height="150"/>
@@ -8,16 +8,28 @@
   </block>
 </swiper>
 
+
+<view class = 'course-detail'>
+    <text class = 'course-title'>课程介绍：</text>
+    <text class = 'course-desc'>妇产科学是研究女性特有的生理、病理变化及生殖调控的一门临床学科，包括妇科学、产科学和计划生育三大部分。妇科学是一门研究妇女非妊娠期生殖系统的生理和病理改变、并对其进行诊断和处理的医学学科，包括妇科学基础、女性生殖系统炎症、女性生殖系统肿瘤、生殖内分泌疾病、女性生殖</text>
+</view>
+
 <view class="items-list">
     <view class='pro-item' wx:for="{{proList}}" bindtap='toDetail' data-index='{{index}}'>
-         <image class="pro-logo" src='{{item.logo}}'></image>
-        <view class='pro-body'>
-            <view class="pro-title">{{item.title}}</view>
-            <text class='pro-desc'>{{item.desc}}</text>
-            <view class="pro-footer">
-                <image class="btn-detail" src='/images/btn1.png'></image>
-                <button class="btn-ask" open-type="contact"><image src='/images/btn2.png'/></button>
-            </view>
-        </view>
+         <image src='{{item.course}}'></image>
+         <text>{{item.title}}</text>
     </view>
+</view>
+
+<view class="course-view">
+  <view>课程通知</view>
+    <view >1</view>
+    <view>2</view>
+    <view>3</view>
+</view>
+<view class="course-view">
+    <view>课程讨论</view>
+    <view >1</view>
+    <view>2</view>
+    <view>3</view>
 </view>
