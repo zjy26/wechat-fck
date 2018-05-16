@@ -3,7 +3,14 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/join/join",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/course/info",     
+    "pages/course/learn",    
+    "pages/course/theory",   
+    "pages/course/pratice",  
+    "pages/course/refer",    
+    "pages/course/test",     
+    "pages/course/homework"   
   ],
   "window":{
     "backgroundTextStyle":"light",

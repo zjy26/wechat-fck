@@ -1,0 +1,5 @@
+<!-- 申报信息 -->
+<view>
+    <text>申报信息...</text>
+    <image style="width: 200px; height: 200px; background-color: #eeeeee;"  src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
+</view>

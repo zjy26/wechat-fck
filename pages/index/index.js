@@ -12,43 +12,23 @@ Page({
     indicatorDots: false,
     autoplay: true,
     interval: 2000,
-    duration: 1000,
-    proList: [
-      {
-        course: '/images/course.png',
-        title: '申报信息'
-      },{
-        course: '/images/course.png',
-        title: '课程首页'
-      }, {
-        course: '/images/course.png',
-        title: '课程导学'
-      }, {
-        course: '/images/course.png',
-        title: '理论教学'
-      }, {
-        course: '/images/course.png',
-        title: '实践教学'
-      }, {
-        course: '/images/course.png',
-        title: '参考资料'
-      }, {
-        course: '/images/course.png',
-        title: '自我测试'
-      }, {
-        course: '/images/course.png',
-        title: '课程作业'
-      }
-
-    ]
+    duration: 1000
   },
   onLoad: function () {
     this.setData({
       test:'01',
     })
   },
-  toDetail:function(e){
+  toInfo:function(e){
     console.log(e);
     var index = e.currentTarget.dataset.index;
+    wx.navigateTo({
+      url: '../course/info'
+    })
+  },
+  toLearn: function () {
+    wx.navigateTo({
+      url: '../course/learn'
+    })
   }
 })

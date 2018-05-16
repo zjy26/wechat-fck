@@ -16,11 +16,6 @@
      // tab切换  
      currentTab: 0,
    },
-    bindButtonTap: function () {
-      this.setData({
-      focus: true
-     })
-   },
    onLoad: function () {
      var that = this;
 

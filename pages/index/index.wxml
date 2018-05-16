@@ -15,10 +15,38 @@
 </view>
 
 <view class="items-list">
-    <view class='pro-item' wx:for="{{proList}}" bindtap='toDetail' data-index='{{index}}'>
-         <image src='{{item.course}}'></image>
-         <text>{{item.title}}</text>
-    </view>
+  <view class='pro-item' bindtap='toInfo'>
+    <image src='/images/course.png'></image>
+    <text>申报信息</text>
+  </view>
+  <view class='pro-item'>
+    <image src='/images/course.png'></image>
+    <text>课程首页</text>
+  </view>
+  <view class='pro-item' bindtap='toLearn'>
+    <image src='/images/course.png'></image>
+    <text>课程导学</text>
+  </view>
+  <view class='pro-item' bindtap='toDetail'>
+    <image src='/images/course.png'></image>
+    <text>课程理论</text>
+  </view>
+    <view class='pro-item' bindtap='toDetail'>
+    <image src='/images/course.png'></image>
+    <text>实践教学</text>
+  </view>
+  <view class='pro-item' bindtap='toDetail'>
+    <image src='/images/course.png'></image>
+    <text>参考资料</text>
+  </view>
+  <view class='pro-item' bindtap='toDetail'>
+    <image src='/images/course.png'></image>
+    <text>自我测试</text>
+  </view>
+  <view class='pro-item' bindtap='toDetail'>
+    <image src='/images/course.png'></image>
+    <text>课程作业</text>
+  </view>
 </view>
 
 <view class="course-view">
