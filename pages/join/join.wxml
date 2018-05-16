@@ -1,43 +1,58 @@
 <!--pages/join/join.wxml-->
  
-<view class="nav_container">
-    <navigator class="nav_items" url="" hover-class="navigator-hover">课程同学</navigator>
-    <navigator class="nav_items" url="" hover-class="navigator-hover">课程评价</navigator>
-    <navigator class="nav_items" url="" hover-class="navigator-hover">网络硬盘</navigator>
-    <navigator class="nav_items" url="" hover-class="navigator-hover">留言板</navigator>
-    <navigator class="nav_items" url="" hover-class="navigator-hover">答题集锦</navigator>
-</view>
-  <!-- <view class="nav_right">
-    <view wx:if="{{navRightItems[curIndex].tree.nodes[1].tree.nodes}}">
-      <block wx:for="{{navRightItems[curIndex].tree.nodes[1].tree.nodes}}">
-        <view class="nav_right_items">
-          <navigator url="../list/index?brand={{item.tree.id}}&typeid={{navRightItems[curIndex].id}}">
-            <view>
-              <block wx:if="{{item.tree.logo}}">
-                <image src="{{item.tree.logo}}"></image>
-              </block>
-              <block wx:else>
-                <image src="http://temp.im/50x30"></image>
-              </block>
-            </view>
-            <view wx:if="{{item.tree.desc}}">
-              <text>{{item.tree.desc}}</text>
-            </view>
-            <view wx:else>
-              <text>{{item.tree.desc2}}</text>
-            </view>
-          </navigator>
-        </view>
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">课程同学</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">课程评价</view>  
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">网络硬盘</view>
+    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">留言板</view>
+     <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">答题集锦</view>    
+</view>  
+  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+    <!-- 课程同学 -->  
+    <swiper-item>  
+      <view class="table">
+        <view class="tr bg-w">
+        <view class="th">学号</view>
+        <view class="th">姓名</view>
+        <view class="th ">班级</view>
+      </view>
+      <block wx:for="{{listData}}" wx:key="{{code}}">
+      <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+        <view class="td">{{item.code}}</view>
+        <view class="td">{{item.text}}</view>
+        <view class="td">{{item.type}}</view>
+      </view>
+      <view class="tr" wx:else>
+        <view class="td">{{item.code}}</view>
+        <view class="td">{{item.text}}</view>
+        <view class="td">{{item.type}}</view>
+      </view>
       </block>
-    </view>
-    <view wx:else>暂无数据</view>
-  </view> -->
-
-
-
-
-
-
-
-
-<!-- 课程同学 课程评价 网络硬盘 留言板 答题集锦 -->
+      </view> 
+    </swiper-item>  
+    <!-- 课程评价 -->  
+    <swiper-item>  
+      <form bindsubmit="bindFormSubmit">
+        <textarea placeholder="欢迎评价……" name="textarea" focus="{{focus}}"/>
+        <button class= 'btn-submit' form-type="submit">提交</button>
+        <button class= 'btn-check'>查看</button>
+      </form>
+    </swiper-item>  
+    <!-- 网络硬盘 -->  
+    <swiper-item>  
+      <view>网络硬盘</view>  
+    </swiper-item>
+    <!-- 留言板 -->  
+    <swiper-item> 
+      <form bindsubmit="bindFormSubmit">
+        <textarea placeholder="欢迎留言……" name="textarea" focus="{{focus}}"/>
+        <button class= 'btn-submit' form-type="submit">提交</button>
+        <button class= 'btn-check'>查看</button>
+      </form> 
+    </swiper-item>  
+    <!-- 答题集锦 -->  
+    <swiper-item>  
+      <view>答题集锦</view>  
+    </swiper-item>   
+</swiper>  

@@ -23,13 +23,13 @@
 
 <view class="course-view">
   <view>课程通知</view>
-    <view >1</view>
-    <view>2</view>
-    <view>3</view>
+    <view class="course-desc">1.答案一</view>
+    <view class="course-desc">2.答案二</view>
+    <view class="course-desc">3.答案三</view>
 </view>
 <view class="course-view">
     <view>课程讨论</view>
-    <view >1</view>
-    <view>2</view>
-    <view>3</view>
+    <view class="course-desc">1.注意事项</view>
+    <view class="course-desc">2.哪些危害</view>
+    <view class="course-desc">3.哪些影响</view>
 </view>
