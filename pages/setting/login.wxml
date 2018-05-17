@@ -1,0 +1,13 @@
+<!--pages/setting/login.wxml-->
+<view>
+<input style='padding:1rem'  placeholder="手机号" auto-focus/>
+<input style='padding:1rem' placeholder="密码" auto-focus/>
+
+  <picker style='padding:1rem' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      身份：{{array[index]}}
+    </view>
+  </picker>
+</view>
+
+<button>登录</button>

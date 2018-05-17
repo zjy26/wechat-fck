@@ -1,0 +1,14 @@
+<!--pages/setting/register.wxml-->
+<view>
+<input style='padding:1rem'  placeholder="姓名" auto-focus/>
+<input style='padding:1rem' placeholder="手机号码" auto-focus/>
+  <picker style='padding:1rem' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      身份：{{array[index]}}
+    </view>
+  </picker>
+<input style='padding:1rem' placeholder="密码" auto-focus/>
+<input style='padding:1rem' placeholder="再次输入密码" auto-focus/>
+</view>
+
+<button>注册</button>

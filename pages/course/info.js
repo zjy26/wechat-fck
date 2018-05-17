@@ -62,5 +62,14 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  toDetail: function(e) {
+    console.log(e);
+    var index = e.currentTarget.dataset.index;
+    wx.navigateTo({
+      url: '../course/detail'
+    })
   }
+
 })

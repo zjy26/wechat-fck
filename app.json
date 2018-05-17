@@ -10,7 +10,10 @@
     "pages/course/pratice",  
     "pages/course/refer",    
     "pages/course/test",     
-    "pages/course/homework"   
+    "pages/course/homework",
+    "pages/course/detail",
+    "pages/setting/register",
+    "pages/setting/login"
   ],
   "window":{
     "backgroundTextStyle":"light",

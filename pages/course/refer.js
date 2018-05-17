@@ -1,66 +1,100 @@
 // pages/course/refer.js
+var app = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    url: ''
   },
+  downloadExample: function () {
+    wx.downloadFile({
+      url: 'https://lihaijietju.github.io/jakii/test.pdf',
+      success: function (res) {
+        var tempPath = res.tempFilePath;
+        wx.saveFile({
+          tempFilePath: tempPath,
+          success: function (res) {
+            var savedFilePath = res.savedFilePath;
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+            var fileList = wx.getStorageSync('fileList') || [];
+            fileList.unshift(savedFilePath);
+            wx.setStorageSync('fileList', fileList);
+
+            wx.showToast({
+              title: '下载成功',
+              icon: 'success',
+              duration: 2000
+            });
+
+            setTimeout(function () {
+              wx.hideToast();
+            }, 1000)
+          }
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  lookFileList: function () {
+    wx.navigateTo({
+      url: '/pages/fileList/fileList'
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+  setUrl: function (event) {
+    var that = this;
+    that.setData({
+      url: event.detail.value
+    });
   },
+  downloadFile: function () {
+    if (this.data.url) {
+      wx.downloadFile({
+        url: this.data.url,
+        success: function (res) {
+          var tempPath = res.tempFilePath;
+          wx.saveFile({
+            tempFilePath: tempPath,
+            success: function (res) {
+              var savedFilePath = res.savedFilePath;
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
+              var fileList = wx.getStorageSync('fileList') || [];
+              fileList.unshift(savedFilePath);
+              wx.setStorageSync('fileList', fileList);
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
+              wx.showToast({
+                title: '下载成功',
+                icon: 'success',
+                duration: 2000
+              });
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
+              setTimeout(function () {
+                wx.hideToast();
+              }, 1000)
+            },
+            fail: function () {
+              wx.showToast({
+                title: '保存文件失败',
+                icon: 'success',
+                duration: 2000
+              });
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
+              setTimeout(function () {
+                wx.hideToast();
+              }, 1000)
+            }
+          })
+        },
+        fail: function () {
+          wx.showToast({
+            title: '下载失败，请重试',
+            icon: 'success',
+            duration: 2000
+          });
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+          setTimeout(function () {
+            wx.hideToast();
+          }, 1000)
+        }
+      })
+
+
+    }
   }
 })

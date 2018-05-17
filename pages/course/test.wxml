@@ -1,4 +1,9 @@
 <!-- 自我测试 -->
 
 <!--pages/course/test.wxml-->
-<text>pages/course/test.wxml</text>
+<button bindtap="chooseimage">图片上传</button>
+ <image src="{{tempFilePaths }}" mode="aspecFill"/>  
+
+  
+ 
+ 

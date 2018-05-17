@@ -30,5 +30,30 @@ Page({
     wx.navigateTo({
       url: '../course/learn'
     })
+  },
+  toTheory: function (e) {
+    wx.navigateTo({
+      url: '../course/theory'
+    })
+  },
+  toPratice: function () {
+    wx.navigateTo({
+      url: '../course/pratice'
+    })
+  },
+  toRefer: function (e) {
+    wx.navigateTo({
+      url: '../course/refer'
+    })
+  },
+  toTest: function () {
+    wx.navigateTo({
+      url: '../course/test'
+    })
+  },
+  toHomework: function (e) {
+    wx.navigateTo({
+      url: '../course/homework'
+    })
   }
 })

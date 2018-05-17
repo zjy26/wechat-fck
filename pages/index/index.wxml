@@ -11,7 +11,7 @@
 
 <view class = 'course-detail'>
     <text class = 'course-title'>课程介绍：</text>
-    <text class = 'course-desc'>妇产科学是研究女性特有的生理、病理变化及生殖调控的一门临床学科，包括妇科学、产科学和计划生育三大部分。妇科学是一门研究妇女非妊娠期生殖系统的生理和病理改变、并对其进行诊断和处理的医学学科，包括妇科学基础、女性生殖系统炎症、女性生殖系统肿瘤、生殖内分泌疾病、女性生殖</text>
+    <text class = 'course-desc'>课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍 </text>
 </view>
 
 <view class="items-list">
@@ -27,23 +27,23 @@
     <image src='/images/course.png'></image>
     <text>课程导学</text>
   </view>
-  <view class='pro-item' bindtap='toDetail'>
+  <view class='pro-item' bindtap='toTheory'>
     <image src='/images/course.png'></image>
-    <text>课程理论</text>
+    <text>理论教学</text>
   </view>
-    <view class='pro-item' bindtap='toDetail'>
+    <view class='pro-item' bindtap='toPratice'>
     <image src='/images/course.png'></image>
     <text>实践教学</text>
   </view>
-  <view class='pro-item' bindtap='toDetail'>
+  <view class='pro-item' bindtap='toRefer'>
     <image src='/images/course.png'></image>
     <text>参考资料</text>
   </view>
-  <view class='pro-item' bindtap='toDetail'>
+  <view class='pro-item' bindtap='toTest'>
     <image src='/images/course.png'></image>
     <text>自我测试</text>
   </view>
-  <view class='pro-item' bindtap='toDetail'>
+  <view class='pro-item' bindtap='toHomework'>
     <image src='/images/course.png'></image>
     <text>课程作业</text>
   </view>

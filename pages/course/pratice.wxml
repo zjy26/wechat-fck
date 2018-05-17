@@ -1,4 +1,5 @@
 <!-- 实践教学 -->
 
 <!--pages/course/pratice.wxml-->
-<text>pages/course/pratice.wxml</text>
+<text>实践教学</text>
+<button bindtap='down_img'>下载图片</button>
