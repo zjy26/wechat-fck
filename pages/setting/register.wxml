@@ -1,14 +1,27 @@
 <!--pages/setting/register.wxml-->
-<view>
-<input style='padding:1rem'  placeholder="姓名" auto-focus/>
-<input style='padding:1rem' placeholder="手机号码" auto-focus/>
-  <picker style='padding:1rem' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-    <view class="picker">
-      身份：{{array[index]}}
-    </view>
-  </picker>
-<input style='padding:1rem' placeholder="密码" auto-focus/>
-<input style='padding:1rem' placeholder="再次输入密码" auto-focus/>
+  <view>
+  <view class='info'>
+    <view class="input-title">姓名:</view>
+    <input class="input-value" type='text' placeholder="姓名" auto-focus></input>
+  </view>
+  <view class='info'>
+    <view class="input-title">手机号:</view>
+    <input class="input-value" type='number' placeholder="手机号"></input>
+  </view>
+  <view class='info'>
+    <view class="input-title">密码:</view>
+    <input class="input-value" password placeholder="密码"></input>
+  </view>
+  <view class='info'>
+    <view class="input-title">再次输入密码:</view>
+    <input class="input-value" password placeholder="再次输入密码"></input>
+  </view>
+  <view class='info'>
+    <picker class="input-title" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        身份：{{array[index]}}
+      </view>
+    </picker>
+  </view>
 </view>
-
-<button>注册</button>
+<view class='container'><button bindtap='login'>注册</button></view>

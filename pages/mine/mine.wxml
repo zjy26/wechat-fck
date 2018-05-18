@@ -1,14 +1,16 @@
 <!--pages/mine/mine.wxml-->
 
 <view class="container">
-	<view class="userinfo">
+
+  <view class="userinfo">
 		<image wx:if="{{userInfo && userInfo.avatarUrl}}" class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
 		<text class="userinfo-nickname">{{ userInfo.nickName }}</text>
 	</view>
 
-   <button class="contract" open-type="contact">
+  <button class="contract" open-type="contact">
     联系客服
   </button>
+  
   <view class="about" bindtap="aboutUs">
     关于我们
   </view>
@@ -17,6 +19,7 @@
     <button style="float:left" bindtap="register">注册</button>
     <button style="float:right" bindtap="login">登录</button>
   </view>
+
 </view>
 
 

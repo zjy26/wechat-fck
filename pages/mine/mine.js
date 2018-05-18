@@ -3,14 +3,8 @@ const app = getApp()
 
 Page({
   data: {
-    balance: 0,
-    freeze: 0,
-    score: 0,
-    score_sign_continuous: 0
   },
-  onLoad() {
 
-  },
   onShow() {
     this.getUserInfo();
   },
@@ -28,6 +22,7 @@ Page({
       }
     })
   },
+
   aboutUs: function () {
     wx.showModal({
       title: '关于我们',
@@ -41,6 +36,7 @@ Page({
         url: '../setting/login'
       })
   },
+  
   register: function () {
     wx.navigateTo({
       url: '../setting/register'

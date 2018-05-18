@@ -1,1 +1,16 @@
 /* pages/setting/login.wxss */
+.info {
+  height: auto;
+  margin: 30rpx;
+}
+.input-title { 
+  float:left;
+  padding-top:34rpx;
+}
+.input-value {
+  padding:1rem;
+}
+
+.container{
+  display:block;
+}
